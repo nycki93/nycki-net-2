@@ -6,35 +6,16 @@
 
 /* Theme colors */
 :root {
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #C0C0C0;
-	--color-gray-90: #333;
+	--xkcd-light-grey: #d8dcd6;
+	--xkcd-steel-blue: #5a7d9a;
+	--xkcd-magenta: #c20078;
 
-	--background-color: #fff;
-
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	--background-color: black;
+	--text-color: var(--xkcd-light-grey);
+	--text-color-link: var(--xkcd-steel-blue);
 
 	--syntax-tab-size: 2;
 }
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
-
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
-
-		--background-color: #15202b;
-	}
-}
-
 
 /* Global stylesheet */
 * {
@@ -81,13 +62,6 @@ li {
 a[href] {
 	color: var(--text-color-link);
 }
-a[href]:visited {
-	color: var(--text-color-link-visited);
-}
-a[href]:hover,
-a[href]:active {
-	color: var(--text-color-link-active);
-}
 
 main {
 	padding: 1rem;
@@ -97,7 +71,7 @@ main :first-child {
 }
 
 header {
-	border-bottom: 1px dashed var(--color-gray-20);
+	border-bottom: 1.5ch double var(--xkcd-magenta);
 }
 header:after {
 	content: "";
@@ -107,7 +81,7 @@ header:after {
 
 .links-nextprev {
 	list-style: none;
-	border-top: 1px dashed var(--color-gray-20);
+	border-top: 1.5ch double var(--xkcd-magenta);
 	padding: 1em 0;
 }
 
@@ -201,7 +175,6 @@ header {
 .postlist-date,
 .postlist-item:before {
 	font-size: 0.8125em; /* 13px /16 */
-	color: var(--color-gray-90);
 }
 .postlist-date {
 	word-spacing: -0.5px;
