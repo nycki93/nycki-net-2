@@ -27,3 +27,14 @@ layout: layouts/base.njk
 </ul>
 {%- endif %}
 {%- endif %}
+
+<div class="commentbox"></div>
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>
+	var el = document.querySelectorAll('.commentbox')[0];
+	var style = window.getComputedStyle(document.body);
+	console.log(style);
+	commentBox('5745017201098752-proj', {
+		textColor: style.color,
+	})
+</script>
