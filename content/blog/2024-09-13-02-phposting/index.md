@@ -13,7 +13,7 @@ Wow, posting on my phone kinda sucks. My current workflow:
 
 - use **cx file explorer** to view the network drive, upload images, and write a text file (YOU ARE HERE)
 
-{% image "./screenshot.png", "screenshot of this post in a text editor" %}
+![a screenshot of a text editor](./screenshot.png)
 
 - go back to termux and push the updated files
 
