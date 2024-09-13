@@ -28,15 +28,12 @@ layout: layouts/base.njk
 {%- endif %}
 {%- endif %}
 
-{#
-<div class="commentbox"></div>
-<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-<script>
-	var el = document.querySelectorAll('.commentbox')[0];
-	var style = window.getComputedStyle(document.body);
-	console.log(style);
-	commentBox('5745017201098752-proj', {
-		textColor: style.color,
-	})
-</script>
-#}
+{# <div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="1dd6bcd8-97df-4cc1-a8ab-6324f9c732d0"
+  data-page-id="{{ page.url | getPostId }}"
+  data-page-url="{{ metadata.url | noTrailingSlash }}{{ page.url }}"
+  data-page-title="{{ title | slugify }}"
+  data-theme="auto"
+></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script> #}

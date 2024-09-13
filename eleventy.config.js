@@ -79,6 +79,20 @@ module.exports = function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
 
+	eleventyConfig.addFilter("getPostId", function getPostId(url) {
+		const fragments = url.split('/').filter(f => f.trim());
+		return fragments[fragments.length - 1];
+	});
+
+	eleventyConfig.addFilter("noTrailingSlash", function noTrailingSlash(url) {
+		const length = url.length;
+		if (url[length - 1] === '/') {
+			return url.slice(0, length - 1);
+		} else {
+			return url;
+		}
+	});
+
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", mdLib => {
 		mdLib.use(markdownItAnchor, {
