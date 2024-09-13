@@ -2,7 +2,7 @@
 title: Phposting
 date: 2024-09-13
 tags:
-  - my blog
+  - my-blog
 ---
 
 Wow, posting on my phone kinda sucks. My current workflow:
