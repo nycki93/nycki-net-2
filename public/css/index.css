@@ -24,7 +24,7 @@
 
 html,
 body {
-	padding: 0;
+	padding: 1rem;
 	margin: 0 auto;
 	font-family: var(--font-family);
 	color: var(--text-color);
@@ -34,7 +34,7 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 40em;
+	max-width: 60em;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -70,18 +70,9 @@ main :first-child {
 	margin-top: 0;
 }
 
-header {
-	border-bottom: 1.5ch double var(--xkcd-magenta);
-}
-header:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
 .links-nextprev {
 	list-style: none;
-	border-top: 1.5ch double var(--xkcd-magenta);
+	border-top: 1rem double var(--xkcd-magenta);
 	padding: 1em 0;
 }
 
@@ -116,39 +107,18 @@ code {
 	word-break: break-all;
 }
 
-/* Header */
-header {
-	display: flex;
-	gap: 1em .5em;
-	flex-wrap: wrap;
-	align-items: center;
-	padding: 1em;
-}
-.home-link {
-	font-size: 1em; /* 16px /16 */
-	font-weight: 700;
-	margin-right: 2em;
-}
-.home-link:link:not(:hover) {
-	text-decoration: none;
+/* Nav */
+nav ul {
+	list-style: none;
+	padding-left: 0;
 }
 
-/* Nav */
-.nav {
-	display: flex;
-	padding: 0;
-	margin: 0;
-	list-style: none;
+nav li {
+	display: inline;
 }
-.nav-item {
-	display: inline-block;
-	margin-right: 1em;
-}
-.nav-item a[href]:not(:hover) {
-	text-decoration: none;
-}
-.nav a[href][aria-current="page"] {
-	text-decoration: underline;
+
+nav li + li::before {
+	content: ' | ';
 }
 
 /* Posts list */
@@ -242,8 +212,13 @@ h2 + .header-anchor {
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
+	max-width: 100%;
+	max-height: 80vh;
+	width: auto;
+	height: auto;
+}
+
+h1 {
+	padding-bottom: 1rem;
+	border-bottom: 1rem double var(--xkcd-magenta);
 }
