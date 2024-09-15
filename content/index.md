@@ -13,8 +13,8 @@ My name is Nycki ([ˈnɪki](http://ipa-reader.xyz/?text=%CB%88n%C9%AAki)) (she/t
 - <nupanick@gmail.com>
 - <https://github.com/nycki93>
 
-[![button for nycki](/a/88x13-nycki-r2.png)](https://nycki.net)
-[![button of cohost, by mykocalico](/a/88x13-cohost-mykocalico.png)](https://cohost.org/nycki)
+[![button of nycki](/a/88x31-nycki-r2.png)](https://nycki.net)
+[![button of cohost, by mykocalico](/a/88x31-cohost-mykocalico.png)](https://cohost.org/nycki)
 
 ## Blog
 
