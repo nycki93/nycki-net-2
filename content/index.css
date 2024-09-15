@@ -63,17 +63,10 @@ a[href] {
 	color: var(--text-color-link);
 }
 
-main {
-	padding: 1rem;
-}
-main :first-child {
-	margin-top: 0;
-}
-
 .links-nextprev {
 	list-style: none;
-	border-top: 1rem double var(--xkcd-magenta);
-	padding: 1em 0;
+	border-top: 12px double var(--xkcd-magenta);
+	padding: 20px 0;
 }
 
 table {
@@ -207,8 +200,14 @@ a[href].header-anchor:focus,
 	color: #aaa;
 }
 
-h2 + .header-anchor {
-	font-size: 1.5em;
+h1:not(:has(+h2)) {
+	padding-bottom: 20px;
+	border-bottom: 12px double var(--xkcd-magenta);
+}
+
+h2 {
+	padding-top: 20px;
+	border-top: 12px double var(--xkcd-magenta);
 }
 
 img {
@@ -216,9 +215,4 @@ img {
 	max-height: 80vh;
 	width: auto;
 	height: auto;
-}
-
-h1 {
-	padding-bottom: 1rem;
-	border-bottom: 1rem double var(--xkcd-magenta);
 }
