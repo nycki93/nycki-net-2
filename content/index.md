@@ -10,17 +10,19 @@ My name is Nycki ([ˈnɪki](http://ipa-reader.xyz/?text=%CB%88n%C9%AAki)) (she/t
 
 ## Contact
 
-Some of these will change as I transition from my old internet name 'Nupa' to my new one 'Nycki'. It's just personal preference, I'll still answer to either name for the time being.
-
 - <nupanick@gmail.com>
 - <https://github.com/nycki93>
-- <https://twitter.com/nupanick>
+
+[![button for nycki](/a/88x13-nycki-r2.png)](https://nycki.net)
+[![button of cohost, by mykocalico](/a/88x13-cohost-mykocalico.png)](https://cohost.org/nycki)
 
 ## Blog
 
-[blog!](/blog)
+[blog!](/blog) | [rss!](/blog/feed.xml)
 
-[rss!](/blog/feed.xml)
+## Links
+
+[![button of sofia-drawsmore](/a/88x31-sofia.png)](https://sofiadrawsmore.neocities.org/)
 
 ## Creations
 

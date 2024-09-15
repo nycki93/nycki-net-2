@@ -13,6 +13,7 @@ const pluginDrafts = require("./eleventy.config.drafts.js");
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("content/**/*.png");
 	eleventyConfig.addPassthroughCopy('content/**/*.css');
+	eleventyConfig.addPassthroughCopy({ "public": "/" });
 	eleventyConfig.addPassthroughCopy({ "patches": "/" });
 
 	// Run Eleventy when these files change:
