@@ -23,6 +23,7 @@ My name is Nycki ([ˈnɪki](http://ipa-reader.xyz/?text=%CB%88n%C9%AAki)) (she/t
 ## Links
 
 [![button of sofia-drawsmore](/a/88x31-sofia.png)](https://sofiadrawsmore.neocities.org/)
+[![button of quwyou](/a/button_quwyou.gif)](https://quwyou.com)
 
 ## Creations
 
