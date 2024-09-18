@@ -27,12 +27,5 @@ layout: layouts/base.njk
 {%- endif %}
 {%- endif %}
 
-{# <div id="cusdis_thread"
-  data-host="https://cusdis.com"
-  data-app-id="1dd6bcd8-97df-4cc1-a8ab-6324f9c732d0"
-  data-page-id="{{ page.url | getPostId }}"
-  data-page-url="{{ metadata.url | noTrailingSlash }}{{ page.url }}"
-  data-page-title="{{ title | slugify }}"
-  data-theme="auto"
-></div>
-<script async defer src="https://cusdis.com/js/cusdis.es.js"></script> #}
+<script defer src="http://xnil.io/comentario/comentario.js"></script>
+<comentario-comments theme="dark"></comentario-comments>
