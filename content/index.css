@@ -200,11 +200,6 @@ h1:not(:has(+h2)) {
 	border-bottom: 12px double var(--xkcd-magenta);
 }
 
-h2 {
-	padding-top: 20px;
-	border-top: 12px double var(--xkcd-magenta);
-}
-
 img {
 	max-width: 100%;
 	max-height: 80vh;

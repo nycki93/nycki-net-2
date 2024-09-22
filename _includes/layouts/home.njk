@@ -1,4 +1,13 @@
 ---
 layout: layouts/base.njk
 ---
+{% css %}
+
+h2 {
+	border: none;
+	padding-top: 20px;
+	border-top: 12px double var(--xkcd-magenta);
+}
+
+{% endcss %}
 {{ content | safe }}
