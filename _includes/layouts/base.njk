@@ -1,36 +1,36 @@
 <!doctype html>
 <html lang="{{ metadata.language }}">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ title or metadata.title }}</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title or metadata.title }}</title>
 
-		{% set blurb = content | truncate(240) %}
-		<meta name="description" content="{{ description or blurb or metadata.description }}">
-		<link rel="alternate" href="/blog/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-		<link rel="alternate" href="/blog/feed.json" type="application/json" title="{{ metadata.title }}">
-		<meta name="generator" content="{{ eleventy.generator }}">
-		<link rel="stylesheet" href="/index.css">
-		<link rel="stylesheet" href="{% getBundleFileUrl 'css' %}">
-	</head>
-	<body>
-		<a href="#skip" class="visually-hidden">Skip to main content</a>
+        {% set blurb = content | truncate(240) %}
+        <meta name="description" content="{{ description or blurb or metadata.description }}">
+        <link rel="alternate" href="/blog/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+        <link rel="alternate" href="/blog/feed.json" type="application/json" title="{{ metadata.title }}">
+        <meta name="generator" content="{{ eleventy.generator }}">
+        <link rel="stylesheet" href="/index.css">
+        <link rel="stylesheet" href="{% getBundleFileUrl 'css' %}">
+    </head>
+    <body>
+        <a href="#skip" class="visually-hidden">Skip to main content</a>
 
-		<header>
-			<nav>
-				<ul>
-					<li><a href="/">home</a></li>
-					<li><a href="/blog">blog</a></li>
-				</ul>
-			</nav>
-		</header>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/">home</a></li>
+                    <li><a href="/blog">blog</a></li>
+                </ul>
+            </nav>
+        </header>
 
-		<main id="skip">
-			{{ content | safe }}
-		</main>
+        <main id="skip">
+            {{ content | safe }}
+        </main>
 
-		<footer></footer>
+        <footer></footer>
 
-		<!-- This page `{{ page.url | htmlBaseUrl }}` was built on {% currentBuildDate %} -->
-	</body>
+        <!-- This page `{{ page.url | htmlBaseUrl }}` was built on {% currentBuildDate %} -->
+    </body>
 </html>

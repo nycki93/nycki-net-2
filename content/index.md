@@ -13,8 +13,8 @@ My name is Nycki ([ˈnɪki](http://ipa-reader.xyz/?text=%CB%88n%C9%AAki)) (she/t
 - <nupanick@gmail.com>
 - <https://github.com/nycki93>
 
-[![button of nycki](/a/88x31-nycki-r2.png)](https://nycki.net)
-[![button of cohost, by mykocalico](/a/88x31-cohost-mykocalico.png)](https://cohost.org/nycki)
+![nycki](/a/button-nycki.png)
+[![I was on Cohost!](/a/button-cohost-mykocalico.png)](https://cohost.org/nycki)
 
 ## Blog
 
@@ -22,8 +22,10 @@ My name is Nycki ([ˈnɪki](http://ipa-reader.xyz/?text=%CB%88n%C9%AAki)) (she/t
 
 ## Links
 
-[![button of sofia-drawsmore](/a/88x31-sofia.png)](https://sofiadrawsmore.neocities.org/)
-[![button of quwyou](/a/button_quwyou.gif)](https://quwyou.com)
+[![sofia-drawsmore](/a/button-sofia.png)](https://sofiadrawsmore.neocities.org/)
+[![pebble](/a/button-pebble.gif)](https://pebble.pet)
+[![quwyou](/a/button-quwyou.gif)](https://quwyou.com)
+[![88 by 31](/a/button-88by31.gif)](https://cyber.dabamos.de/88x31/)
 
 ## Creations
 
@@ -64,3 +66,4 @@ Stuff I've made!
 
 - 2023-12-14. Updated this website to use markdown, via pandoc and make.
 - 2024-09-15. Redid the build process in Eleventy.
+- 2024-09-26. Updated my 88x31 button.
