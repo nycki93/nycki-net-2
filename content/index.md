@@ -23,8 +23,9 @@ My name is Nycki ([ˈnɪki](http://ipa-reader.xyz/?text=%CB%88n%C9%AAki)) (she/t
 ## Links
 
 [![sofia-drawsmore](/a/button-sofia.png)](https://sofiadrawsmore.neocities.org/)
-[![pebble](/a/button-pebble.gif)](https://pebble.pet)
-[![quwyou](/a/button-quwyou.gif)](https://quwyou.com)
+[![pebble](/a/button-pebble.gif)](https://pebble.pet/)
+[![quwyou](/a/button-quwyou.gif)](https://quwyou.com/)
+[![alterae](/a/button-alterae.webp)](https://alterae.online/)
 [![88 by 31](/a/button-88by31.gif)](https://cyber.dabamos.de/88x31/)
 
 ## Creations
