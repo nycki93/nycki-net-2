@@ -3,8 +3,11 @@ layout: layouts/home.njk
 eleventyNavigation:
   key: Archive
   order: 2
+title: blog
 ---
-<h1>All Posts</h1>
+<h1>blog</h1>
+
+<a href="feed.xml">feed.xml</a>
 
 {% set postslist = collections.posts %}
 {% include "postslist.njk" %}

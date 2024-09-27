@@ -1,26 +1,34 @@
 ---
 layout: layouts/home.njk
-title: nycki.net
+title: home
 ---
-# {{ title }}
+# nycki.net 
 
-## Welcome!
+## welcome!
 
-My name is Nycki ([ˈnɪki](http://ipa-reader.xyz/?text=%CB%88n%C9%AAki)) (she/they), and [this is a website!](http://hrwiki.org/wiki/First_Time_Here%3F)
+<div style="overflow:auto;padding=0">
 
-## Contact
+<img src="/a/klay-sticker-djuan-blep.png" alt="picture of klay pointing to himself with his tongue stuck out" width="100" height="auto" style="float:left;">
 
-- <nupanick@gmail.com>
-- <https://github.com/nycki93>
+My name is nycki ([ˈnɪki](http://ipa-reader.xyz/?text=%CB%88n%C9%AAki)) (they/them), and [this is a website!](http://hrwiki.org/wiki/First_Time_Here%3F)
+
+</div>
+
+## contact
+
+- email: <nupanick@gmail.com>
+- matrix: [@nycki:bark.lgbt](https://chat.bark.lgbt/)
+- github: <https://github.com/nycki93>
+- fediverse: <https://bark.lgbt/@nycki> (18+)
 
 ![nycki](/a/button-nycki.png)
-[![I was on Cohost!](/a/button-cohost-mykocalico.png)](https://cohost.org/nycki)
+[![i was on cohost!](/a/button-cohost-mykocalico.png)](https://cohost.org/nycki)
 
-## Blog
+## blog
 
-[blog!](/blog) | [rss!](/blog/feed.xml)
+[blog](/blog) | [feed.xml](/blog/feed.xml)
 
-## Links
+## cool people
 
 [![sofia-drawsmore](/a/button-sofia.png)](https://sofiadrawsmore.neocities.org/)
 [![pebble](/a/button-pebble.gif)](https://pebble.pet/)
@@ -28,7 +36,7 @@ My name is Nycki ([ˈnɪki](http://ipa-reader.xyz/?text=%CB%88n%C9%AAki)) (she/t
 [![alterae](/a/button-alterae.webp)](https://alterae.online/)
 [![88 by 31](/a/button-88by31.gif)](https://cyber.dabamos.de/88x31/)
 
-## Creations
+## creations
 
 Stuff I've made!
 
@@ -63,8 +71,9 @@ Stuff I've made!
 
 [Local mirror](/2007) | [Wayback Machine](https://web.archive.org/web/20071101001849/http://nick.lamicela.org/)
 
-## Log
+## log
 
 - 2023-12-14. Updated this website to use markdown, via pandoc and make.
 - 2024-09-15. Redid the build process in Eleventy.
 - 2024-09-26. Updated my 88x31 button.
+- 2024-09-27. Changed pronouns from she/they to they/them. I'd describe myself as genderfluid overall.
