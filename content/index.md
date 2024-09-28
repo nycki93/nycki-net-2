@@ -6,11 +6,13 @@ title: home
 
 ## welcome!
 
-<div style="overflow:auto;padding=0">
+<div style="overflow:auto">
 
 <img src="/a/klay-sticker-djuan-blep.png" alt="picture of klay pointing to himself with his tongue stuck out" width="100" height="auto" style="float:left;">
 
 My name is nycki ([ˈnɪki](http://ipa-reader.xyz/?text=%CB%88n%C9%AAki)) (they/them), and [this is a website!](http://hrwiki.org/wiki/First_Time_Here%3F)
+
+Sticker by [djuan](https://linktr.ee/mkiiisystem)!
 
 </div>
 
@@ -28,7 +30,7 @@ My name is nycki ([ˈnɪki](http://ipa-reader.xyz/?text=%CB%88n%C9%AAki)) (they/
 
 [blog](/blog) | [feed.xml](/blog/feed.xml)
 
-## cool people
+## cool people buttons go here
 
 [![sofia-drawsmore](/a/button-sofia.png)](https://sofiadrawsmore.neocities.org/)
 [![pebble](/a/button-pebble.gif)](https://pebble.pet/)
