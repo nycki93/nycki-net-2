@@ -23,8 +23,8 @@ Sticker by [djuan](https://linktr.ee/mkiiisystem)!
 - github: <https://github.com/nycki93>
 - fediverse: <https://bark.lgbt/@nycki> (18+)
 
-![nycki](/a/button-nycki.png)
-[![i was on cohost!](/a/button-cohost-mykocalico.png)](https://cohost.org/nycki)
+{% webButton '/a/button-nycki.png', 'nycki' %}
+{% webButton '/a/button-cohost-mykocalico.png', 'i was on cohost!', 'https://cohost.org/nycki' %}
 
 ## blog
 
@@ -32,11 +32,10 @@ Sticker by [djuan](https://linktr.ee/mkiiisystem)!
 
 ## cool people buttons go here
 
-[![sofia-drawsmore](/a/button-sofia.png)](https://sofiadrawsmore.neocities.org/)
-[![pebble](/a/button-pebble.gif)](https://pebble.pet/)
-[![quwyou](/a/button-quwyou.gif)](https://quwyou.com/)
-[![alterae](/a/button-alterae.webp)](https://alterae.online/)
-[![88 by 31](/a/button-88by31.gif)](https://cyber.dabamos.de/88x31/)
+{% webButton '/a/button-sofia.png', 'sofia-drawsmore', 'https://sofiadrawsmore.neocities.org/' %}
+{% webButton '/a/button-pebble.gif', 'pebble', 'https://pebble.pet/' %}
+{% webButton '/a/button-quwyou.gif', 'quwyou', 'https://quwyou.com/' %}
+{% webButton '/a/button-88by31.gif', '88 by 31', 'https://cyber.dabamos.de/88x31/' %}
 
 ## creations
 

@@ -108,6 +108,12 @@ module.exports = function(eleventyConfig) {
 		return (new Date()).toISOString();
 	})
 
+	eleventyConfig.addNunjucksShortcode("webButton", function (src, alt, href) {
+		const img = `<img src="${src}" alt="${alt}" title="${alt}" width=88 height=31 class="web-button">`;
+		const a = href ? `<a href=${href}>${img}</a>` : img;
+		return a;
+	});
+
 	// Features to make your build faster (when you need them)
 
 	// If your passthrough copy gets heavy and cumbersome, add this line
