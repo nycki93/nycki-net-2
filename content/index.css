@@ -1,11 +1,11 @@
 /* Defaults */
-:root {
+html {
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
 /* Theme colors */
-:root {
+html {
 	--xkcd-light-grey: #d8dcd6;
 	--xkcd-steel-blue: #5a7d9a;
 	--xkcd-magenta: #c20078;
@@ -204,6 +204,19 @@ h1:not(:has(+h2)) {
 img {
 	max-width: 100%;
 	max-height: 80vh;
+}
+
+.gallery {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery img {
+    border: 0.5ch solid;
+    margin: 1ch;
+    width: 12ch;
 }
 
 .web-button {
