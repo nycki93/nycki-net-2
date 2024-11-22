@@ -201,6 +201,7 @@ h1:not(:has(+h2)) {
 }
 
 article {
+	overflow: auto;
 	padding-bottom: 20px;
 	margin-bottom: 20px;
 	border-bottom: 12px double var(--xkcd-magenta);

@@ -11,7 +11,13 @@ const pluginDrafts = require("./eleventy.config.drafts.js");
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 module.exports = function(eleventyConfig) {
+	if (process.env.NODE_ENV === 'localhost') {
+		console.log('metadata override');
+		eleventyConfig.addGlobalData('metadata.url', 'http://localhost:8080');
+	}
+
 	eleventyConfig.addPassthroughCopy("content/**/*.png");
+	eleventyConfig.addPassthroughCopy("content/**/*.webp");
 	eleventyConfig.addPassthroughCopy('content/**/*.css');
 	eleventyConfig.addPassthroughCopy({ "public": "/" });
 	eleventyConfig.addPassthroughCopy({ "patches": "/" });
