@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>nycki.net | {{ title or metadata.title }}</title>
+        <title>{{ metadata.title }} | {{ title }}</title>
         <meta name="description" content="{{ description or metadata.description }}">
-        <meta property="og:title" content="{{ title }}">
+        <meta property="og:title" content="{{ metadata.title }} | {{ title }}">
         <meta property="og:description" content="{{ description or metadata.description }}">
         <meta property="og:image" content="{{ metadata.url + page.url + preview_image }}">
         <link rel="alternate" href="/blog/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
