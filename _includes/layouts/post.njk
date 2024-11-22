@@ -5,11 +5,13 @@ layout: layouts/base.njk
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 <h1>{{ title }}</h1>
 
+<article>
+	{{ content | safe }}
+</article>
+
 <ul class="post-metadata">
 	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
 </ul>
-
-{{ content | safe }}
 
 {%- for tag in tags | filterTagList %}
 {%- set tagUrl %}/blog/tags/{{ tag | slugify }}/{% endset %}

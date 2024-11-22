@@ -61,8 +61,7 @@ a[href] {
 
 .links-nextprev {
 	list-style: none;
-	border-top: 12px double var(--xkcd-magenta);
-	padding: 20px 0;
+	padding: 0;
 }
 
 table {
@@ -198,6 +197,12 @@ a[href].header-anchor:focus,
 
 h1:not(:has(+h2)) {
 	padding-bottom: 20px;
+	border-bottom: 12px double var(--xkcd-magenta);
+}
+
+article {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
 	border-bottom: 12px double var(--xkcd-magenta);
 }
 
