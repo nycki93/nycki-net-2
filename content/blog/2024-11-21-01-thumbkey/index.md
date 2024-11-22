@@ -1,6 +1,6 @@
 ---
 title: Thumbkey
-date: 2024-10-08
+date: 2024-11-21
 description: A keyboard for your thumbs!
 tags:
   - app
