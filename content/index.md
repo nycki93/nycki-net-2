@@ -35,6 +35,7 @@ Sticker by [djuan](https://linktr.ee/mkiiisystem)!
 {% webButton '/a/button-sofia.png', 'sofia-drawsmore', 'https://sofiadrawsmore.neocities.org/' %}
 {% webButton '/a/button-pebble.gif', 'pebble', 'https://pebble.pet/' %}
 {% webButton '/a/button-quwyou.gif', 'quwyou', 'https://quwyou.com/' %}
+{% webButton '/a/button-alterae.webp', 'alterae', 'https://alterae.online/' %}
 {% webButton '/a/button-88by31.gif', '88 by 31', 'https://cyber.dabamos.de/88x31/' %}
 
 ## creations
