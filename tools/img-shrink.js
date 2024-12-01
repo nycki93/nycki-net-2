@@ -13,14 +13,14 @@ async function main() {
         const fileOut = `${dirOut}/${file.name}.webp`;
 
         const lossless = file.ext === '.png';
-        const cmd = [
+        const command = [
             `magick "${fileIn}"`,
             `-define webp:lossless=${lossless}`,
             `-define webp:target-size=200kb`,
             `"${fileOut}"`,
         ].join(' ');
-        console.log(cmd);
-        exec(cmd, (_err, stdout, stderr) => console.log(stdout + stderr));
+        console.log(command);
+        exec(command, (_err, stdout, stderr) => console.log(stdout + stderr));
     }
 }
 
