@@ -9,7 +9,7 @@
 		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
 		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-		"img2k": "node tools/img-shrink.js"
+		"img-shrink": "node tools/img-shrink.js"
 	},
 	"repository": {
 		"type": "git",
