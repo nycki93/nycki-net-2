@@ -12,7 +12,9 @@ async function main() {
         const file = path.parse(fileIn);
         const fileOut = `${dirOut}/${file.name}.webp`;
 
+        // TODO: what if the input image is already a lossless webp?
         const lossless = file.ext === '.png';
+        
         const command = [
             `magick "${fileIn}"`,
             `-define webp:lossless=${lossless}`,
