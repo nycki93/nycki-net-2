@@ -3,14 +3,21 @@ import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import pluginRss from '@11ty/eleventy-plugin-rss';
 
-import pluginDrafts from "./eleventy.config.drafts.js";
-
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 export default function(eleventyConfig) {
+	console.log(process.env);
+
 	if (process.env.NODE_ENV === 'localhost') {
 		console.log('metadata override');
 		eleventyConfig.addGlobalData('metadata.url', 'http://localhost:8080');
 	}
+
+	// Drafts
+	eleventyConfig.addPreprocessor('drafts', '*', (data) => {
+		if (data.draft && process.env.ELEVENTY_RUN_MODE === 'build') {
+			return false;
+		}
+	});
 
 	eleventyConfig.addPassthroughCopy("content/**/*.png");
 	eleventyConfig.addPassthroughCopy("content/**/*.webp");
@@ -23,9 +30,6 @@ export default function(eleventyConfig) {
 
 	// Watch content images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
-
-	// App plugins
-	eleventyConfig.addPlugin(pluginDrafts);
 
 	// Official plugins
 	eleventyConfig.addBundle('css');
