@@ -1,5 +1,29 @@
-
-{% for section in content | sections %}
-  {{ section | safe }}
-  <hr>
-{% endfor %}
+---json
+{
+  "permalink": "/updates.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "My Blog about Boats",
+    "description": "I am writing about my experiences as a naval navel-gazer.",
+    "language": "en",
+    "base": "https://example.com/",
+    "author": {
+      "name": "Boaty McBoatFace"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/pretty-atom-feed.xml" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ metadata.language or page.lang }}">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.description }}</subtitle>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+  </author>
+  {%- for post in content | sections | reverse %}
+  <entry>
+    <content type="html">{{ post.content | renderTransforms(post.data.page, metadata.base) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>
