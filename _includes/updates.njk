@@ -1,6 +1,5 @@
 
 {% for section in content | sections %}
-  START SECTION
   {{ section | safe }}
-  END SECTION
+  <hr>
 {% endfor %}
