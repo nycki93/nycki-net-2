@@ -1,7 +1,8 @@
-import { DateTime } from "luxon";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import pluginRss from '@11ty/eleventy-plugin-rss';
+import { JSDOM } from 'jsdom';
+import { DateTime } from "luxon";
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 export default function(eleventyConfig) {
@@ -90,6 +91,29 @@ export default function(eleventyConfig) {
 		} else {
 			return url;
 		}
+	});
+
+	// https://stackoverflow.com/a/74005383
+	eleventyConfig.addFilter('sections', (html) => {
+		const dom = new JSDOM(html);
+		const document = dom.window.document;
+		const chunks = [];
+		for (const h1 of document.querySelectorAll('h1')) {
+			let chunk = '';
+			let elem = h1;
+			while (true) {
+				chunk += elem.outerHTML;
+				elem = document.evaluate(
+					"following-sibling::*[1]", 
+					elem,
+					function() {},
+					dom.window.XPathResult.FIRST_ORDERED_NODE_TYPE
+				).singleNodeValue;
+				if (!elem || elem.nodeName === 'H1') break;
+			}
+			chunks.push(chunk);
+		}
+		return chunks;
 	});
 
 	eleventyConfig.addShortcode("currentBuildDate", () => {
