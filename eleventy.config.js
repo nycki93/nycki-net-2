@@ -2,7 +2,6 @@ import { DateTime } from "luxon";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import pluginRss from '@11ty/eleventy-plugin-rss';
-import pluginUpgrade from '@11ty/eleventy-upgrade-help';
 
 import pluginDrafts from "./eleventy.config.drafts.js";
 
@@ -35,7 +34,6 @@ export default function(eleventyConfig) {
 	});
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginRss);
-	eleventyConfig.addPlugin(pluginUpgrade);
 
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
