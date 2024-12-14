@@ -1,12 +1,10 @@
 import { DateTime } from "luxon";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
-import pluginRss from '@11ty/eleventy-plugin-rss';
+import { feedPlugin } from '@11ty/eleventy-plugin-rss';
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 export default function(eleventyConfig) {
-	console.log(process.env);
-
 	if (process.env.NODE_ENV === 'localhost') {
 		console.log('metadata override');
 		eleventyConfig.addGlobalData('metadata.url', 'http://localhost:8080');
@@ -37,7 +35,22 @@ export default function(eleventyConfig) {
 		preAttributes: { tabindex: 0 }
 	});
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-	eleventyConfig.addPlugin(pluginRss);
+	
+	// RSS Feed
+	eleventyConfig.addPlugin(feedPlugin, {
+		type: 'atom',
+		outputPath: '/blog/feed.xml',
+		stylesheet: '/pretty-atom-feed.xml',
+		collection: { name: 'posts' },
+		metadata: {
+			language: 'en',
+			title: 'nycki.net',
+			base: 'https://nycki.net/',
+			author: {
+				name: 'nycki.net',
+			},
+		},
+	});
 
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
