@@ -7,7 +7,7 @@ permalink: /blog/feed.xml
 	<title>{{ metadata.title }}</title>
 	<subtitle>{{ metadata.description }}</subtitle>
 	<link href="{{ permalink | htmlBaseUrl(metadata.url) }}" rel="self"/>
-	<link href="{{ metadata.url | addPathPrefixToFullUrl }}"/>
+	<link href="{{ metadata.url | htmlBaseUrl }}"/>
 	<updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
 	<id>{{ metadata.url }}</id>
 	<author>

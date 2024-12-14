@@ -1,16 +1,13 @@
-const { DateTime } = require("luxon");
-const markdownItAnchor = require("markdown-it-anchor");
+import { DateTime } from "luxon";
+import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import pluginRss from '@11ty/eleventy-plugin-rss';
+import pluginUpgrade from '@11ty/eleventy-upgrade-help';
 
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginBundle = require("@11ty/eleventy-plugin-bundle");
-const pluginNavigation = require("@11ty/eleventy-navigation");
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
-
-const pluginDrafts = require("./eleventy.config.drafts.js");
+import pluginDrafts from "./eleventy.config.drafts.js";
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
 	if (process.env.NODE_ENV === 'localhost') {
 		console.log('metadata override');
 		eleventyConfig.addGlobalData('metadata.url', 'http://localhost:8080');
@@ -30,16 +27,15 @@ module.exports = function(eleventyConfig) {
 
 	// App plugins
 	eleventyConfig.addPlugin(pluginDrafts);
-	// eleventyConfig.addPlugin(pluginImages);
 
 	// Official plugins
-	eleventyConfig.addPlugin(pluginRss);
+	eleventyConfig.addBundle('css');
 	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
 		preAttributes: { tabindex: 0 }
 	});
-	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-	eleventyConfig.addPlugin(pluginBundle);
+	eleventyConfig.addPlugin(pluginRss);
+	eleventyConfig.addPlugin(pluginUpgrade);
 
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
@@ -94,20 +90,6 @@ module.exports = function(eleventyConfig) {
 		} else {
 			return url;
 		}
-	});
-
-	// Customize Markdown library settings:
-	eleventyConfig.amendLibrary("md", mdLib => {
-		mdLib.use(markdownItAnchor, {
-			permalink: markdownItAnchor.permalink.ariaHidden({
-				placement: "after",
-				class: "header-anchor",
-				symbol: "#",
-				ariaHidden: false,
-			}),
-			level: [1,2,3,4],
-			slugify: eleventyConfig.getFilter("slugify")
-		});
 	});
 
 	eleventyConfig.addShortcode("currentBuildDate", () => {
